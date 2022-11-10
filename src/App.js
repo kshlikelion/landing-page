@@ -1,17 +1,21 @@
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, Box } from "@chakra-ui/react";
 import Hero from "@components/Hero";
-import NavBar from "@components/NavBar";
-import Features from "@components/Features";
 import Statistics from "@components/Statistics";
 import HeroTwo from "@components/HeroTwo";
-import Footer from "@components/Footer";
+import Service from "@components/Service";
+import Footer from "@components/Footer"
+// import NavBar from "@components/NavBar";
+
 import ThreeTierPricing from "@components/Pricing";
+import theme from "./theme";
+import Fonts from "./Fonts";
+
 function App() {
   return (
-    <ChakraProvider>
-      <NavBar />
+    <ChakraProvider theme={theme}>
+      <Fonts />
       <Hero />
-      <Features />
+      <Service />
       <Statistics />
       <ThreeTierPricing />
       <HeroTwo />

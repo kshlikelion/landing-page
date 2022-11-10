@@ -58,7 +58,7 @@ export default function WithSubnavigation() {
             fontFamily={"heading"}
             color={useColorModeValue("gray.800", "white")}
           >
-            Logo
+            Welcome to
           </Text>
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
@@ -86,10 +86,10 @@ export default function WithSubnavigation() {
             fontSize={"sm"}
             fontWeight={600}
             color={"white"}
-            bg={"pink.400"}
+            bg={"orange.400"}
             href={"#"}
             _hover={{
-              bg: "pink.300",
+              bg: "orange.500",
             }}
           >
             Sign Up
@@ -259,7 +259,7 @@ const MobileNavItem = ({ label, children, href }) => {
 
 const NAV_ITEMS = [
   {
-    label: "Inspiration",
+    label: "다오",
     children: [
       {
         label: "Explore Design Work",
@@ -274,7 +274,7 @@ const NAV_ITEMS = [
     ],
   },
   {
-    label: "Find Work",
+    label: "다오",
     children: [
       {
         label: "Job Board",
@@ -289,11 +289,11 @@ const NAV_ITEMS = [
     ],
   },
   {
-    label: "Learn Design",
+    label: "조율을",
     href: "#",
   },
   {
-    label: "Hire Designers",
+    label: "해DAO",
     href: "#",
   },
 ];

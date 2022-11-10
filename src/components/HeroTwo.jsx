@@ -18,22 +18,28 @@ export default function CallToActionWithAnnotation() {
           as={Box}
           textAlign={"center"}
           spacing={{ base: 8, md: 14 }}
-          py={{ base: 20, md: 36 }}
+          h={"100vh"}
         >
           <Heading
             fontWeight={600}
             fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
-            lineHeight={"110%"}
+            lineHeight={"120%"}
           >
-            Make money from <br />
             <Text as={"span"} color={"green.400"}>
-              your audience
+              조율해 DAO
+            </Text>
+            로 <br />
+            팀플의 광명 찾고, <br />
+            <Text as={"span"} color={"green.400"}>
+              마음의 평화를 누리자
             </Text>
           </Heading>
-          <Text color={"gray.500"}>
-            Monetize your content by charging your most loyal readers and reward
-            them loyalty points. Give back to your loyal readers by granting
-            them access to your pre-releases and sneak-peaks.
+          <Text color={"gray.500"} fontSize={"xl"}>
+            자, 이제{" "}
+            <Text as={"span"} color={"orange.400"}>
+              조율해 DAO
+            </Text>
+            를 시작하지
           </Text>
           <Stack
             direction={"column"}
@@ -50,11 +56,12 @@ export default function CallToActionWithAnnotation() {
               _hover={{
                 bg: "green.500",
               }}
+              size={"lg"}
             >
-              Get Started
+              고개를 끄덕인다
             </Button>
-            <Button variant={"link"} colorScheme={"blue"} size={"sm"}>
-              Learn more
+            <Button variant={"link"} colorScheme={"gray.500"} size={"lg"}>
+              그것이 바로, "팀워크"니까
             </Button>
             <Box>
               <Icon
@@ -62,18 +69,17 @@ export default function CallToActionWithAnnotation() {
                 color={useColorModeValue("gray.800", "gray.300")}
                 w={71}
                 position={"absolute"}
-                right={-71}
+                right={-51}
                 top={"10px"}
               />
               <Text
-                fontSize={"lg"}
-                fontFamily={"Caveat"}
+                fontSize={"md"}
                 position={"absolute"}
                 right={"-125px"}
                 top={"-15px"}
-                transform={"rotate(10deg)"}
+                transform={"rotate(15deg)"}
               >
-                Starting at $15/mo
+                고민은 팀플을 지연시킬 뿐
               </Text>
             </Box>
           </Stack>

@@ -12,6 +12,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { FaCheckCircle } from "react-icons/fa";
+import { IoIosCloseCircle } from "react-icons/io";
 
 function PriceWrapper({ children }) {
   return (
@@ -30,67 +31,25 @@ function PriceWrapper({ children }) {
 
 export default function ThreeTierPricing() {
   return (
-    <Box py={12}>
+    <Box py={200}>
       <VStack spacing={2} textAlign="center">
-        <Heading as="h1" fontSize="4xl">
-          Plans that fit your need
+        <Heading as="h1" fontSize="5xl">
+          팀 조율해{" "}
+          <Text as={"span"} color={"green.400"}>
+            DAO
+          </Text>
         </Heading>
         <Text fontSize="lg" color={"gray.500"}>
-          Start with 14-day free trial. No credit card needed. Cancel at
-          anytime.
+          팀원들과 각자의 할 일 (feat. 조율해DAO 서타일)
         </Text>
       </VStack>
       <Stack
         direction={{ base: "column", md: "row" }}
         textAlign="center"
         justify="center"
-        spacing={{ base: 4, lg: 10 }}
+        spacing={{ base: 2, lg: 5 }}
         py={10}
       >
-        <PriceWrapper>
-          <Box py={4} px={12}>
-            <Text fontWeight="500" fontSize="2xl">
-              Hobby
-            </Text>
-            <HStack justifyContent="center">
-              <Text fontSize="3xl" fontWeight="600">
-                $
-              </Text>
-              <Text fontSize="5xl" fontWeight="900">
-                79
-              </Text>
-              <Text fontSize="3xl" color="gray.500">
-                /month
-              </Text>
-            </HStack>
-          </Box>
-          <VStack
-            bg={useColorModeValue("gray.50", "gray.700")}
-            py={4}
-            borderBottomRadius={"xl"}
-          >
-            <List spacing={3} textAlign="start" px={12}>
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                unlimited build minutes
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                Lorem, ipsum dolor.
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                5TB Lorem, ipsum dolor.
-              </ListItem>
-            </List>
-            <Box w="80%" pt={7}>
-              <Button w="full" colorScheme="red" variant="outline">
-                Start trial
-              </Button>
-            </Box>
-          </VStack>
-        </PriceWrapper>
-
         <PriceWrapper>
           <Box position="relative">
             <Box
@@ -101,7 +60,7 @@ export default function ThreeTierPricing() {
             >
               <Text
                 textTransform="uppercase"
-                bg={useColorModeValue("red.300", "red.700")}
+                bg={useColorModeValue("orange.300", "orange.700")}
                 px={3}
                 py={1}
                 color={useColorModeValue("gray.900", "gray.300")}
@@ -109,99 +68,196 @@ export default function ThreeTierPricing() {
                 fontWeight="600"
                 rounded="xl"
               >
-                Most Popular
+                조.장.
               </Text>
             </Box>
-            <Box py={4} px={12}>
+            <Box py={4} px={6} bgColor={"gray.200"} borderTopRadius={"xl"}>
               <Text fontWeight="500" fontSize="2xl">
-                Growth
+                형준 Kim.eth
               </Text>
               <HStack justifyContent="center">
-                <Text fontSize="3xl" fontWeight="600">
-                  $
-                </Text>
+                <Text fontSize="3xl" fontWeight="600"></Text>
                 <Text fontSize="5xl" fontWeight="900">
-                  149
+                  70
                 </Text>
-                <Text fontSize="3xl" color="gray.500">
-                  /month
+                <Text fontSize="2xl" color="gray.500">
+                  냥(토큰)
                 </Text>
               </HStack>
             </Box>
             <VStack
-              bg={useColorModeValue("gray.50", "gray.700")}
+              bg={useColorModeValue("gray.100", "gray.700")}
               py={4}
               borderBottomRadius={"xl"}
             >
-              <List spacing={3} textAlign="start" px={12}>
+              <List spacing={3} textAlign="start" px={10}>
                 <ListItem>
                   <ListIcon as={FaCheckCircle} color="green.500" />
-                  unlimited build minutes
+                  팀장 맡기 (30토큰)
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={FaCheckCircle} color="green.500" />첫 팀 회의
+                  참석 (20토큰)
+                </ListItem>
+                <ListItem>
+                  <ListIcon
+                    fontSize={"20px"}
+                    as={IoIosCloseCircle}
+                    color="orange.500"
+                    ml={"-2px"}
+                  />
+                  1차 자료조사 (20토큰)
                 </ListItem>
                 <ListItem>
                   <ListIcon as={FaCheckCircle} color="green.500" />
-                  Lorem, ipsum dolor.
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
-                  5TB Lorem, ipsum dolor.
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
-                  5TB Lorem, ipsum dolor.
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
-                  5TB Lorem, ipsum dolor.
+                  발표 하기 (20토큰)
                 </ListItem>
               </List>
-              <Box w="80%" pt={7}>
-                <Button w="full" colorScheme="red">
-                  Start trial
+              <Box w="80%" pt={5}>
+                <Button w="full" colorScheme="orange">
+                  팀원의 과거 팀플 이력
                 </Button>
               </Box>
             </VStack>
           </Box>
         </PriceWrapper>
+
         <PriceWrapper>
-          <Box py={4} px={12}>
+          <Box py={4} px={6} bgColor={"gray.200"} borderTopRadius={"xl"}>
             <Text fontWeight="500" fontSize="2xl">
-              Scale
+              율 Jo.eth
             </Text>
             <HStack justifyContent="center">
-              <Text fontSize="3xl" fontWeight="600">
-                $
-              </Text>
+              <Text fontSize="3xl" fontWeight="600"></Text>
               <Text fontSize="5xl" fontWeight="900">
-                349
+                40
               </Text>
-              <Text fontSize="3xl" color="gray.500">
-                /month
+              <Text fontSize="2xl" color="gray.500">
+                냥(토큰)
               </Text>
             </HStack>
           </Box>
           <VStack
-            bg={useColorModeValue("gray.50", "gray.700")}
+            bg={useColorModeValue("gray.100", "gray.700")}
             py={4}
             borderBottomRadius={"xl"}
           >
-            <List spacing={3} textAlign="start" px={12}>
+            <List spacing={3} textAlign="start" px={10}>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                unlimited build minutes
+                <ListIcon as={FaCheckCircle} color="green.500" />첫 팀 회의 참석
+                (20토큰)
+              </ListItem>
+              <ListItem>
+                <ListIcon
+                  fontSize={"20px"}
+                  as={IoIosCloseCircle}
+                  color="orange.500"
+                  ml={"-2px"}
+                />
+                1차 자료조사 (10토큰)
               </ListItem>
               <ListItem>
                 <ListIcon as={FaCheckCircle} color="green.500" />
-                Lorem, ipsum dolor.
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                5TB Lorem, ipsum dolor.
+                아이디어 제안 (20토큰)
               </ListItem>
             </List>
-            <Box w="80%" pt={7}>
-              <Button w="full" colorScheme="red" variant="outline">
-                Start trial
+            <Box w="80%" pt={5}>
+              <Button w="full" colorScheme="orange" variant="outline">
+                팀원의 과거 팀플 이력
+              </Button>
+            </Box>
+          </VStack>
+        </PriceWrapper>
+
+        <PriceWrapper>
+          <Box py={4} px={6} bgColor={"gray.200"} borderTopRadius={"xl"}>
+            <Text fontWeight="500" fontSize="2xl">
+              준식 Eom.eth
+            </Text>
+            <HStack justifyContent="center">
+              <Text fontSize="3xl" fontWeight="600"></Text>
+              <Text fontSize="5xl" fontWeight="900">
+                35
+              </Text>
+              <Text fontSize="2xl" color="gray.500">
+                냥(토큰)
+              </Text>
+            </HStack>
+          </Box>
+          <VStack
+            bg={useColorModeValue("gray.100", "gray.700")}
+            py={4}
+            borderBottomRadius={"xl"}
+          >
+            <List spacing={3} textAlign="start" px={10}>
+              <ListItem>
+                <ListIcon
+                  fontSize={"20px"}
+                  as={IoIosCloseCircle}
+                  color="orange.500"
+                  ml={"-2px"}
+                />
+                첫 팀 회의 참석 (20토큰)
+              </ListItem>
+              <ListItem>
+                <ListIcon as={FaCheckCircle} color="green.500" />
+                1차 자료조사 (15토큰)
+              </ListItem>
+              <ListItem>
+                <ListIcon as={FaCheckCircle} color="green.500" />
+                기초 코오딩 (20토큰)
+              </ListItem>
+            </List>
+            <Box w="80%" pt={5}>
+              <Button w="full" colorScheme="orange" variant="outline">
+                팀원의 과거 팀플 이력
+              </Button>
+            </Box>
+          </VStack>
+        </PriceWrapper>
+
+        <PriceWrapper>
+          <Box py={4} px={6} bgColor={"gray.200"} borderTopRadius={"xl"}>
+            <Text fontWeight="500" fontSize="2xl">
+              성현 Kim.eth
+            </Text>
+            <HStack justifyContent="center">
+              <Text fontSize="3xl" fontWeight="600"></Text>
+              <Text fontSize="5xl" fontWeight="900">
+                35
+              </Text>
+              <Text fontSize="2xl" color="gray.500">
+                냥(토큰)
+              </Text>
+            </HStack>
+          </Box>
+          <VStack
+            bg={useColorModeValue("gray.100", "gray.700")}
+            py={4}
+            borderBottomRadius={"xl"}
+          >
+            <List spacing={3} textAlign="start" px={10}>
+              <ListItem>
+                <ListIcon as={FaCheckCircle} color="green.500" />첫 팀 회의 참석
+                (20토큰)
+              </ListItem>
+              <ListItem>
+                <ListIcon as={FaCheckCircle} color="green.500" />
+                1차 자료조사 (15토큰)
+              </ListItem>
+              <ListItem>
+                <ListIcon
+                  fontSize={"20px"}
+                  as={IoIosCloseCircle}
+                  color="orange.500"
+                  ml={"-2px"}
+                />
+                기초 디자인 (20토큰)
+              </ListItem>
+            </List>
+            <Box w="80%" pt={5}>
+              <Button w="full" colorScheme="orange" variant="outline">
+                팀원의 과거 팀플 이력
               </Button>
             </Box>
           </VStack>
